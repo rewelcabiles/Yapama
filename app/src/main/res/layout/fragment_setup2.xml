@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".landing.Setup2Fragment">
+
+<!-- TODO: Update blank fragment layout -->
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/karla_bold"
+    android:text="@string/setup_question_2"
+    android:textAlignment="center"
+    android:textSize="14sp" />
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/encrypt_1"
+
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+
+    android:layout_marginTop="22sp"
+    android:background="@drawable/default_button"
+    android:fontFamily="@font/karla"
+    android:shadowColor="#A8A8A8"
+    android:shadowDx="0"
+    android:shadowDy="0"
+    android:shadowRadius="5"
+    android:text="Open PGP (Recommended)"
+    android:textColor="#F3F3F3"
+    android:textSize="18sp" />
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/encrypt_2"
+
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+
+    android:layout_marginTop="22sp"
+    android:background="@drawable/default_button"
+    android:fontFamily="@font/karla"
+    android:shadowColor="#A8A8A8"
+    android:shadowDx="0"
+    android:shadowDy="0"
+    android:shadowRadius="5"
+    android:text="Password Based Encryption"
+    android:textColor="#F3F3F3"
+    android:textSize="18sp" />
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/back"
+
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+
+    android:layout_marginTop="22sp"
+    android:background="@drawable/default_button"
+    android:fontFamily="@font/karla"
+    android:shadowColor="#A8A8A8"
+    android:shadowDx="0"
+    android:shadowDy="0"
+    android:shadowRadius="5"
+    android:text="Back"
+    android:textColor="#F3F3F3"
+    android:textSize="18sp" />
+
+</LinearLayout>

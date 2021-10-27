@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Yapama3" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/toolbar_bg</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/text_main_day</item>
+        <item name="android:fontFamily">@font/karla</item>
+        <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
+    </style>
+    <style name="toolbar_style">
+        <item name="android:background">@color/toolbar_bg</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+    <style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_baseline_add_24</item>
+        <item name="android:background">?android:attr/actionBarItemBackground</item>
+        <item name="android:color">@color/text_main</item>
+    </style>
+</resources>
