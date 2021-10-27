@@ -29,8 +29,8 @@ tools:context=".landing.Setup2Fragment">
     android:shadowDy="0"
     android:shadowRadius="5"
     android:text="Open PGP (Recommended)"
-    android:textColor="#F3F3F3"
-    android:textSize="18sp" />
+    android:textColor="@color/white"
+    android:textSize="14sp" />
 
 <androidx.appcompat.widget.AppCompatButton
     android:id="@+id/encrypt_2"
@@ -46,8 +46,8 @@ tools:context=".landing.Setup2Fragment">
     android:shadowDy="0"
     android:shadowRadius="5"
     android:text="Password Based Encryption"
-    android:textColor="#F3F3F3"
-    android:textSize="18sp" />
+    android:textColor="@color/white"
+    android:textSize="14sp" />
 
 <androidx.appcompat.widget.AppCompatButton
     android:id="@+id/back"
@@ -63,7 +63,7 @@ tools:context=".landing.Setup2Fragment">
     android:shadowDy="0"
     android:shadowRadius="5"
     android:text="Back"
-    android:textColor="#F3F3F3"
-    android:textSize="18sp" />
+    android:textColor="@color/white"
+    android:textSize="14sp" />
 
 </LinearLayout>

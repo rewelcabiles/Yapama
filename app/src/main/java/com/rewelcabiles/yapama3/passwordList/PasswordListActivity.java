@@ -1,5 +1,6 @@
 package com.rewelcabiles.yapama3.passwordList;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.Menu;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
@@ -18,6 +20,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rewelcabiles.yapama3.R;
+import com.rewelcabiles.yapama3.passwordAdd.addPasswordActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,13 +40,9 @@ public class PasswordListActivity extends AppCompatActivity {
 
         //Action Bar Stuff
         Toolbar toolbar = (Toolbar) findViewById(R.id.main_toolbar);
-        AppCompatButton add_pass_button = findViewById(R.id.button_new_password);
-        AppCompatButton add_folder_button = findViewById(R.id.button_new_folder);
-        AppCompatButton search_button = findViewById(R.id.button_search);
-
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
+        ActionBar tbar = getSupportActionBar();
+        tbar.setDisplayShowTitleEnabled(false);
 
 
 
@@ -71,6 +70,10 @@ public class PasswordListActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+
             case R.id.button_new_folder:
                 Toast.makeText(getApplicationContext(), "Feature In Progress", Toast.LENGTH_LONG).show();
                 return true;
@@ -79,8 +82,10 @@ public class PasswordListActivity extends AppCompatActivity {
                 return true;
 
             case R.id.button_new_password:
-                Toast.makeText(getApplicationContext(), "Feature In Progdess", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(this, addPasswordActivity.class);
+                startActivity(intent);
                 return true;
+
 
             default:
                 // If we got here, the user's action was not recognized.

@@ -29,8 +29,8 @@
         android:shadowDy="0"
         android:shadowRadius="5"
         android:text="Google Drive"
-        android:textColor="#F3F3F3"
-        android:textSize="18sp" />
+        android:textColor="@color/white"
+        android:textSize="14sp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/platform_2"
@@ -46,8 +46,8 @@
         android:shadowDy="0"
         android:shadowRadius="5"
         android:text="Git Repository"
-        android:textColor="#F3F3F3"
-        android:textSize="18sp" />
+        android:textColor="@color/white"
+        android:textSize="14sp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/platform_3"
@@ -63,7 +63,7 @@
         android:shadowDy="0"
         android:shadowRadius="5"
         android:text="FTP Server"
-        android:textColor="#F3F3F3"
-        android:textSize="18sp" />
+        android:textColor="@color/white"
+        android:textSize="14sp" />
 
 </LinearLayout>

@@ -12,7 +12,7 @@
     <style name="toolbar_style">
         <item name="android:background">@color/toolbar_bg</item>
         <item name="android:textAlignment">center</item>
-
+        <item name="colorControlNormal">@color/text_main</item>
     </style>
     <style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
         <item name="android:src">@drawable/ic_baseline_add_24</item>

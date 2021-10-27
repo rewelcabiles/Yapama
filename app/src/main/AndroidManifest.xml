@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,11 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Yapama3">
-
-
+        <activity android:name=".passwordAdd.addPasswordActivity"></activity>
         <activity
             android:name=".passwordList.PasswordListActivity"
-            android:label="@string/title_activity_password_list"></activity>
+            android:label="@string/title_activity_password_list" />
         <activity android:name=".landing.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
