@@ -10,9 +10,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.rewelcabiles.yapama3.R;
+import com.rewelcabiles.yapama3.helper.PasswordFileManager;
+import com.rewelcabiles.yapama3.passwordList.Password;
+
+import java.lang.reflect.Array;
 
 public class addPasswordActivity extends AppCompatActivity {
 
@@ -21,12 +27,27 @@ public class addPasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_password);
 
+        // Toolbar stuff
         Toolbar toolbar = (Toolbar) findViewById(R.id.main_toolbar);
-
         setSupportActionBar(toolbar);
         ActionBar tBar = getSupportActionBar();
         tBar.setDisplayShowTitleEnabled(false);
         tBar.setDisplayHomeAsUpEnabled(true);
+
+        // Button stuff
+        AppCompatButton generate_button = findViewById(R.id.generate_button);
+        AppCompatButton save_button = (AppCompatButton) findViewById(R.id.save_button);
+
+        EditText input_name = findViewById(R.id.input_name);
+        EditText input_password = findViewById(R.id.input_password);
+
+        save_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                PasswordFileManager.add_password(new Password(input_name.getText().toString(), input_password.getText().toString()), getApplicationContext());
+
+            }
+        });
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -34,32 +55,13 @@ public class addPasswordActivity extends AppCompatActivity {
             case android.R.id.home:
                 this.finish();
                 return true;
-
-            case R.id.button_new_folder:
-                Toast.makeText(getApplicationContext(), "Feature In Progress", Toast.LENGTH_LONG).show();
-                return true;
-            case R.id.button_search:
-                Toast.makeText(getApplicationContext(), "Feature In Proagress", Toast.LENGTH_LONG).show();
-                return true;
-
-            case R.id.button_new_password:
-                Toast.makeText(getApplicationContext(), "Feature In Progdess", Toast.LENGTH_LONG).show();
-                return true;
-
-
             default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
                 return super.onOptionsItemSelected(item);
-
         }
-
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.add_menu, menu);
         return true;
     }
 }

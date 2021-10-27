@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rewelcabiles.yapama3.R;
+import com.rewelcabiles.yapama3.helper.PasswordFileManager;
 import com.rewelcabiles.yapama3.passwordAdd.addPasswordActivity;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class PasswordListActivity extends AppCompatActivity {
 
     private TextView mTextView;
 
-    private List<Password> passwordList = new ArrayList<>();
+    //private List<Password> passwordList = new ArrayList<>();
     private RecyclerView recyclerView;
     private PasswordAdapter pAdapter;
 
@@ -47,22 +48,18 @@ public class PasswordListActivity extends AppCompatActivity {
 
 
         // Recycler View Stuff
-        pAdapter = new PasswordAdapter(passwordList);
+        pAdapter = new PasswordAdapter(PasswordFileManager.generate_password_list(getApplicationContext()));
         recyclerView = (RecyclerView) findViewById(R.id.password_list);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(pAdapter);
 
-        preparePasswordData();
+        //preparePasswordData();
     }
 
     private void preparePasswordData() {
-        Password pass = new Password("Password 1", "123");
-        passwordList.add(pass);
 
-        pass = new Password("Password 2", "123");
-        passwordList.add(pass);
 
         pAdapter.notifyDataSetChanged();
     }
